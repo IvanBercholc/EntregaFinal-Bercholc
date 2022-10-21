@@ -1,3 +1,38 @@
 h1 {
-    margin-top: 40px;
-  }
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+  row-gap: 50px;
+}
+
+.btn-NavBar {
+  color: grey;
+  text-decoration: none;
+  margin-left: 15px;
+}
+.btn-NavBar:hover {
+  color:white
+}
+.active {
+  color: white;
+  border-bottom: 1px solid white;
+}
+.btn-verDetalle {
+  color: black;
+  text-decoration: none;
+  border: 1px solid grey;
+  padding: 4px;
+  border-radius: 7px;
+}
+.btn-verDetalle:hover {
+  color:grey;
+  border-color: black;
+}
+.contador {
+  display: flex;
+}
