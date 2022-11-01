@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../style.css";
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 const ItemCount = (props) => {
   const [count, setCount] = useState(props.initial);
@@ -14,12 +16,13 @@ console.log(props)
 
   return (
     <div>
-      <div>
-        <button onClick={restar}>-</button>
-        <p>{count}</p>
-        <button onClick={sumar}>+</button>
+      <div className="Contenedor-Contador">
+        <ButtonGroup>
+        <Button variant="outline-dark" onClick={restar} id={props.initial===count && "boton-contador-inhabilitado"}><strong>-</strong></Button>
+        <Button id="Numero-Contador" variant="outline-dark">{count}</Button>
+        <Button variant="outline-dark" onClick={sumar} id={props.stock===count && "boton-contador-inhabilitado"}><strong>+</strong></Button>
+        </ButtonGroup>
       </div>
-      <button>Agregar al carrito</button>
     </div>
   );
 };

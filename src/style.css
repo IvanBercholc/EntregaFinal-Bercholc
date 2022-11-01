@@ -33,6 +33,66 @@ h1 {
   color:grey;
   border-color: black;
 }
-.contador {
+
+.btn-verDetalle-disabled {
+  color: black;
+  text-decoration: none;
+  padding: 4px;
+  border-radius: 7px;
+  opacity: 0.5;
+}
+
+.btn-verDetalle-disabled:hover{
+  color:black;
+}
+
+
+
+footer {
+  color: rgb(255, 255, 255);
+  background-color: rgb(33, 37, 41);
   display: flex;
+  justify-content: space-evenly;
+  max-width: 100%;
+  line-height: 2.5;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 50px;
+}
+footer p, footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
+  line-height: 1.5;
+}
+footer h5 {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.Contenedor-Detail {
+  display:flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.Contenedor-Contador {
+  display: flex;
+  justify-content: center;
+  align-items:baseline;
+  gap: 10px;
+  padding-bottom: 15px;
+}
+
+#Numero-Contador:hover {
+  background-color: white;
+  color: black;
+  cursor:default;
+}
+
+#boton-contador-inhabilitado {
+  opacity: 0.5;
+  color: white
+}
+
+#boton-contador-inhabilitado:hover {
+  opacity: 0.5;
+  background-color: white;
 }

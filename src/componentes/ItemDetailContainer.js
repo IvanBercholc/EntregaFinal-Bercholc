@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 import { Productos } from "./Productos";
 import { useParams } from "react-router-dom";
+import "../style.css"
 
 function ItemDetailContainer(props) {
   const [item, setItem] = useState({});
@@ -24,8 +25,7 @@ function ItemDetailContainer(props) {
   }, []);
 
   return (
-    <div>
-      <h1 style={{ color: "grey" }}>{props.greeting}</h1>
+    <div className="Contenedor-Detail">
       <ItemDetail item={item} />
     </div>
   );
