@@ -1,19 +1,53 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import ItemCount from "./ItemCount";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
+import { CartContext } from "./CartContext";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function ItemDetail({ item }) {
+  const [unidades, setUnidades] = useState(0);
+
+  const { addToCart } = useContext(CartContext);
+
+  const agregarUnidades = (numero) => {
+    setUnidades(numero);
+
+    addToCart(item, numero);
+
+    toast.success(`Se han agregado ${numero} ${item.nombre} al carrito`);
+  };
+
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" width="350px" src={item.foto} alt={item.nombre}/>
+    <Card style={{ width: "18rem" }}>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+      <Card.Img variant="top" width="350px" src={item.foto} alt={item.nombre} />
       <Card.Body>
         <Card.Title>{item.nombre}</Card.Title>
-        <Card.Text>
-          ${item.precio}
-        </Card.Text>
-        <ItemCount stock={item.stock} initial={1}/>
-        <Button variant="dark">Agregar al carrito</Button>
+        <Card.Text>${item.precio}</Card.Text>
+        {unidades === 0 ? (
+          <ItemCount
+            agregarUnidades={agregarUnidades}
+            stock={item.stock}
+            initial={1}
+          />
+        ) : (
+          <Link className="btn-irACarrito" to="/cart">
+            Ir al Carrito
+          </Link>
+        )}
       </Card.Body>
     </Card>
   );

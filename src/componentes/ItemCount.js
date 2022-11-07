@@ -5,7 +5,6 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 const ItemCount = (props) => {
   const [count, setCount] = useState(props.initial);
-console.log(props)
   const sumar = () => {
     props.stock>count && setCount(count + 1);
   };
@@ -18,10 +17,11 @@ console.log(props)
     <div>
       <div className="Contenedor-Contador">
         <ButtonGroup>
-        <Button variant="outline-dark" onClick={restar} id={props.initial===count && "boton-contador-inhabilitado"}><strong>-</strong></Button>
+        <Button variant="outline-dark" onClick={restar} className={props.initial===count && "boton-contador-inhabilitado"}><strong>-</strong></Button>
         <Button id="Numero-Contador" variant="outline-dark">{count}</Button>
-        <Button variant="outline-dark" onClick={sumar} id={props.stock===count && "boton-contador-inhabilitado"}><strong>+</strong></Button>
+        <Button variant="outline-dark" onClick={sumar} className={props.stock===count && "boton-contador-inhabilitado"}><strong>+</strong></Button>
         </ButtonGroup>
+        <Button variant="dark" onClick={()=>props.agregarUnidades(count)}>Agregar al carrito</Button>
       </div>
     </div>
   );
