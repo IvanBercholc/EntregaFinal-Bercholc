@@ -27,14 +27,14 @@ h1 {
   color:black;
   text-decoration: none;
   border: 1px solid grey;
-  padding: 4px;
+  padding: 10px;
   border-radius: 7px;
   background-color: rgb(255, 255, 255);
 }
 .btn-verDetalle:hover {
   color:white;
   border: none;
-  background-color: rgb(63, 63, 63);
+  background-color: rgb(39, 39, 39);
 }
 
 .btn-verDetalle-disabled {
@@ -154,7 +154,7 @@ footer h5 {
   color:black;
   text-decoration: none;
   border: 1px solid grey;
-  padding: 4px;
+  padding: 10px;
   border-radius: 7px;
   background-color: rgb(255, 255, 255);
 }
@@ -162,7 +162,7 @@ footer h5 {
 .btn-irACarrito:hover {
   color:white;
   border: none;
-  background-color: rgb(63, 63, 63);
+  background-color: rgb(34, 34, 34);
 
 }
 
@@ -178,7 +178,7 @@ footer h5 {
 }
 
 .botonTienda:hover {
-  background-color: rgb(59, 59, 59);
+  background-color: rgb(37, 37, 37);
   color:white;
   border:none;
 }
@@ -191,3 +191,34 @@ footer h5 {
   text-decoration: none;
 }
 
+.btn-volver-tienda {
+  color:white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 7px;
+  background-color: rgb(36, 36, 36);
+  margin:10px;
+}
+
+.btn-volver-tienda:hover {
+  color:white;
+  border: none;
+  background-color: rgb(88, 88, 88);
+}
+
+.contenedor-formulario {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+}
+.formulario{
+  border: 1px solid grey;
+  border-radius: 20px;
+  padding: 20px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 400px;
+}

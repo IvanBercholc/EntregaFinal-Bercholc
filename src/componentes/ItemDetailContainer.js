@@ -47,20 +47,3 @@ function ItemDetailContainer(props) {
 }
 
 export default ItemDetailContainer;
-
-// import { Productos } from "./Productos";
-
-// const traerProducto = () => {
-//   const producto = Productos.find(
-//     (prod) => prod.codigo === Number(idproducto)
-//   );
-//   return new Promise((res, rej) => {
-//     setTimeout(() => {
-//       res(producto);
-//     }, 1000);
-//   });
-// };
-// traerProducto()
-//   .then((res) => {
-//     setItem(res);
-//   })

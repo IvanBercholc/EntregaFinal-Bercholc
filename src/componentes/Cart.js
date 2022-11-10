@@ -50,6 +50,22 @@ const Cart = () => {
         <Button variant="dark" style={{ width: "100px" }} onClick={deleteAll}>
           Borrar todo
         </Button>
+        </div>
+        <div>
+          <Link
+            style={{ margin: "10px", borderRadius: "5px" }}
+            className="botonTienda"
+            to="/"
+          >
+            Volver a Tienda
+          </Link>
+          <Link
+            style={{ margin: "10px", borderRadius: "5px" }}
+            className="botonTienda"
+            to="/checkout"
+          >
+            Confirmar tu Compra
+          </Link>
       </div>
     </div>
   );

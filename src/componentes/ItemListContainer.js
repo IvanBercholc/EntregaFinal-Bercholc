@@ -56,30 +56,3 @@ function ItemListContainer({ greeting }) {
 }
 
 export default ItemListContainer;
-
-// import { Productos } from "./Productos";
-
-// const traerProductos = () => {
-// return new Promise((res, rej) => {
-//   const ProdFiltrados = Productos.filter(
-//     (prod) => prod.coleccion === coleccion
-//   )
-// const prod = coleccion ? ProdFiltrados : Productos;
-// setTimeout(() => {
-//   res(prod);
-// }, 1000);
-// });
-// };
-// traerProductos()
-// .then((res) => {
-// setItems(res);
-// })
-// .catch((error) => {
-// console.log(error);
-// })
-// .finally(() => {
-// setLoading(false);
-// });
-
-// return () => setLoading(true);
-// }

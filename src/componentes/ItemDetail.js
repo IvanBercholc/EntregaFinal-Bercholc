@@ -44,9 +44,14 @@ function ItemDetail({ item }) {
             initial={1}
           />
         ) : (
-          <Link className="btn-irACarrito" to="/cart">
-            Ir al Carrito
-          </Link>
+          <div>
+            <Link className="btn-irACarrito" to="/cart">
+              Ir al Carrito
+            </Link>
+            <Link className="btn-volver-tienda" to="/">
+              Volver a tienda
+            </Link>
+          </div>
         )}
       </Card.Body>
     </Card>
